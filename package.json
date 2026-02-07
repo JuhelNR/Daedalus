@@ -1,0 +1,14 @@
+{
+  "name": "Daedalus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assets/JS/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  }
+}

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daedalus - Build a Job-Winning Resume in Minutes with AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        .heading-font {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #d4a574 0%, #c8956a 50%, #b88860 100%);
+        }
+        .nature-card {
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .nature-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%);
+            border-radius: inherit;
+        }
+        .orange-gradient {
+            background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+        }
+        .green-gradient {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        .flower-decoration {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-sm py-4 px-6 fixed w-full top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 orange-gradient rounded-lg flex items-center justify-center">
+                    <i class="fas fa-feather text-white text-sm"></i>
+                </div>
+                <span class="text-xl font-bold heading-font text-gray-900">CVPilot</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#" class="text-sm text-gray-600 hover:text-gray-900">Home</a>
+                <a href="#features" class="text-sm text-gray-600 hover:text-gray-900">Features</a>
+                <a href="#resources" class="text-sm text-gray-600 hover:text-gray-900">Resources</a>
+                <a href="#templates" class="text-sm text-gray-600 hover:text-gray-900">Templates</a>
+                <a href="#pricing" class="text-sm text-gray-600 hover:text-gray-900">Pricing</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="login.php"><button class="text-sm text-gray-600 hover:text-gray-900">Login</button></a>
+                <button class="bg-gray-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6 relative overflow-hidden">
+        <!-- Decorative flowers -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23f59e0b' opacity='0.6'/%3E%3Ccircle cx='50' cy='50' r='25' fill='%23fbbf24'/%3E%3C/svg%3E" class="flower-decoration top-10 left-10" alt="">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23f59e0b' opacity='0.6'/%3E%3Ccircle cx='50' cy='50' r='25' fill='%23fbbf24'/%3E%3C/svg%3E" class="flower-decoration top-20 right-16" alt="">
+        
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 heading-font">
+                    Build a Job-Winning<br>Resume in Minutes with AI
+                </h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                    Use our AI-powered resume builder and professional templates to create a resume that gets you hired 3x faster.
+                </p>
+                <button class="orange-gradient text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg shadow-orange-500/30 hover:shadow-xl transition-all">
+                    Create My Resume
+                </button>
+            </div>
+
+            <!-- Hero Image Card -->
+            <div class="max-w-4xl mx-auto relative">
+                <div class="hero-gradient rounded-3xl overflow-hidden shadow-2xl">
+                    <div class="relative h-96 flex items-center justify-center bg-cover bg-center bg-no-repeat backdrop-grayscale-20" style="background-image: url('assets/IMG/vitaly-gariev-WrevB3gLLBs-unsplash.jpg')">
+                        <!-- Illustration of person with laptop in nature setting -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <p class="text-2xl font-semibold opacity-90 p">Your Professional Resume Awaits</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating UI Elements -->
+                        <div class="absolute top-8 left-8 bg-white rounded-xl shadow-lg p-4 max-w-xs">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+                                <span class="text-sm font-medium text-gray-900">Resume Builder</span>
+                            </div>
+                            <p class="text-xs text-gray-600">AI-powered suggestions</p>
+                        </div>
+
+                        <div class="absolute bottom-8 right-8 bg-white rounded-xl shadow-lg p-4">
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-900">ATS Optimized</p>
+                                    <p class="text-xs text-gray-600">Pass all resume scanners</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More decorative flowers -->
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23f59e0b' opacity='0.6'/%3E%3Ccircle cx='50' cy='50' r='25' fill='%23fbbf24'/%3E%3C/svg%3E" class="flower-decoration bottom-0 left-0" alt="">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23f59e0b' opacity='0.6'/%3E%3Ccircle cx='50' cy='50' r='25' fill='%23fbbf24'/%3E%3C/svg%3E" class="flower-decoration bottom-10 right-0" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Interview Section -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-orange-100 to-orange-50 rounded-3xl p-8 shadow-xl">
+                        <div class="bg-white rounded-2xl p-6 mb-4">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full"></div>
+                                <div>
+                                    <div class="h-3 bg-gray-200 rounded w-32 mb-2"></div>
+                                    <div class="h-2 bg-gray-100 rounded w-24"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="h-2 bg-gray-100 rounded w-full"></div>
+                                <div class="h-2 bg-gray-100 rounded w-5/6"></div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="flex-1 bg-white rounded-xl p-4 text-center">
+                                <p class="text-2xl font-bold text-gray-900">40%</p>
+                                <p class="text-xs text-gray-600 mt-1">More Interviews</p>
+                            </div>
+                            <div class="flex-1 bg-white rounded-xl p-4 text-center">
+                                <p class="text-2xl font-bold text-gray-900">32%</p>
+                                <p class="text-xs text-gray-600 mt-1">Higher Salary</p>
+                            </div>
+                            <div class="flex-1 bg-white rounded-xl p-4 text-center">
+                                <p class="text-2xl font-bold text-gray-900">3x</p>
+                                <p class="text-xs text-gray-600 mt-1">Faster Hiring</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6 heading-font">
+                        AI-Powered Interview<br>Ready Resumes
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Our advanced AI analyzes your experience and industry to create personalized, ATS-optimized resumes that get you noticed by recruiters.
+                    </p>
+                    <button class="orange-gradient text-white px-6 py-3 rounded-full font-semibold shadow-lg shadow-orange-500/30 hover:shadow-xl transition-all">
+                        Try AI Resume Builder
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 heading-font">
+                    Features That Make<br>CVPilot Stand Out
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Everything you need to create a professional resume that lands interviews
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Feature Card 1 - Orange -->
+                <div class="orange-gradient rounded-3xl p-8 text-white relative overflow-hidden shadow-xl">
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold mb-4">AI Writing Assistance</h3>
+                        <p class="mb-6 opacity-90">Get intelligent suggestions for every section of your resume. Our AI helps you articulate your experience in the most impactful way.</p>
+                        
+                        <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6">
+                            <div class="mb-4">
+                                <p class="text-sm font-semibold mb-2">Professional Summary</p>
+                                <div class="bg-white/30 rounded-lg p-3 text-sm">
+                                    Results-driven software engineer with 5+ years...
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="flex-1 bg-white/30 backdrop-blur-sm rounded-lg py-2 text-xs font-medium">
+                                    <i class="fas fa-sync-alt mr-1"></i> Rewrite
+                                </button>
+                                <button class="flex-1 bg-white/30 backdrop-blur-sm rounded-lg py-2 text-xs font-medium">
+                                    <i class="fas fa-expand-alt mr-1"></i> Expand
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Card 2 - Green/Dark -->
+                <div class="bg-gradient-to-br from-gray-700 to-gray-900 rounded-3xl p-8 text-white relative overflow-hidden shadow-xl">
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold mb-4">Smart Templates</h3>
+                        <p class="mb-6 opacity-90">Choose from professionally designed templates that are optimized for ATS systems and look great on any device.</p>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-3">
+                                <i class="fas fa-check-circle text-green-400"></i>
+                                <span class="text-sm">ATS-Friendly Format</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-3">
+                                <i class="fas fa-check-circle text-green-400"></i>
+                                <span class="text-sm">Industry Specific</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-3">
+                                <i class="fas fa-check-circle text-green-400"></i>
+                                <span class="text-sm">Modern Design</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-3">
+                                <i class="fas fa-check-circle text-green-400"></i>
+                                <span class="text-sm">Customizable Colors</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Card 3 - Green -->
+                <div class="green-gradient rounded-3xl p-8 text-white relative overflow-hidden shadow-xl">
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold mb-4">One-Click Apply</h3>
+                        <p class="mb-6 opacity-90">Export your resume in multiple formats and apply to jobs with a single click. Save time and apply to more positions.</p>
+                        
+                        <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6 text-center">
+                            <div class="flex justify-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-white/30 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-file-pdf text-xl"></i>
+                                </div>
+                                <div class="w-12 h-12 bg-white/30 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-file-word text-xl"></i>
+                                </div>
+                                <div class="w-12 h-12 bg-white/30 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-link text-xl"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm font-semibold">Export in PDF, DOCX, or get a shareable link</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Card 4 - Warm tone with image background -->
+                <div class="rounded-3xl overflow-hidden shadow-xl relative" style="background: linear-gradient(135deg, rgba(217, 119, 6, 0.9), rgba(180, 83, 9, 0.9)), url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23d97706%22 width=%22400%22 height=%22400%22/%3E%3C/svg%3E'); background-size: cover;">
+                    <div class="p-8 text-white relative z-10">
+                        <h3 class="text-2xl font-bold mb-4">Real-Time Preview</h3>
+                        <p class="mb-6 opacity-90">See your changes instantly as you type. What you see is what you get - no surprises when you download.</p>
+                        
+                        <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-4">
+                            <div class="flex items-center gap-2 mb-3">
+                                <div class="w-8 h-8 bg-white/30 rounded-full"></div>
+                                <div class="flex-1">
+                                    <div class="h-2 bg-white/40 rounded w-3/4 mb-1"></div>
+                                    <div class="h-2 bg-white/30 rounded w-1/2"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="h-1.5 bg-white/30 rounded w-full"></div>
+                                <div class="h-1.5 bg-white/30 rounded w-5/6"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose CVPilot -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 heading-font">
+                    Why Choose CVPilot
+                </h2>
+                <p class="text-xl text-gray-600">Trusted by job seekers worldwide</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="orange-gradient text-white rounded-2xl p-8 mb-4 shadow-lg">
+                        <p class="text-4xl font-bold mb-2">Since 2021</p>
+                        <p class="text-sm opacity-90">Helping jobseekers succeed</p>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">Experience Matters</h4>
+                    <p class="text-sm text-gray-600">Years of expertise in resume writing and career development.</p>
+                </div>
+                <div class="text-center">
+                    <div class="green-gradient text-white rounded-2xl p-8 mb-4 shadow-lg">
+                        <p class="text-4xl font-bold mb-2">100,000+</p>
+                        <p class="text-sm opacity-90">Resumes created monthly</p>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">AI Resumes Delivered</h4>
+                    <p class="text-sm text-gray-600">Join thousands who've successfully landed their dream jobs.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-2xl p-8 mb-4 shadow-lg">
+                        <p class="text-4xl font-bold mb-2">95%</p>
+                        <p class="text-sm opacity-90">Customer satisfaction</p>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">User Success Rate</h4>
+                    <p class="text-sm text-gray-600">Our users report higher interview rates and better job offers.</p>
+                </div>
+            </div>
+
+            <!-- Nature imagery cards -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="rounded-2xl overflow-hidden shadow-lg h-48" style="background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%), linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);">
+                    <div class="h-full flex flex-col justify-end p-6 text-white">
+                        <i class="fas fa-shield-alt text-3xl mb-3 opacity-80"></i>
+                        <p class="font-semibold">Secure & Private</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg h-48" style="background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%), linear-gradient(135deg, #d97706 0%, #b45309 100%);">
+                    <div class="h-full flex flex-col justify-end p-6 text-white">
+                        <i class="fas fa-bolt text-3xl mb-3 opacity-80"></i>
+                        <p class="font-semibold">Lightning Fast</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg h-48" style="background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%), linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                    <div class="h-full flex flex-col justify-end p-6 text-white">
+                        <i class="fas fa-mobile-alt text-3xl mb-3 opacity-80"></i>
+                        <p class="font-semibold">Mobile Ready</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section id="templates" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 heading-font">
+                        Templates Designed<br>for Real Hiring
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Our templates are created by professional resume writers and optimized for Applicant Tracking Systems. Choose from modern, classic, or creative designs.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">ATS-Optimized Formats</h4>
+                                <p class="text-sm text-gray-600">Pass through automated resume scanners used by 99% of companies</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Industry-Specific Layouts</h4>
+                                <p class="text-sm text-gray-600">Templates tailored for tech, business, creative, and healthcare fields</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="orange-gradient text-white px-6 py-3 rounded-full font-semibold shadow-lg shadow-orange-500/30 hover:shadow-xl transition-all">
+                        Browse All Templates
+                    </button>
+                </div>
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-orange-100 to-orange-50 rounded-3xl p-8 shadow-xl">
+                        <div class="bg-white rounded-2xl p-6 shadow-lg">
+                            <div class="flex items-center gap-4 mb-6 pb-4 border-b border-gray-100">
+                                <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl"></div>
+                                <div class="flex-1">
+                                    <div class="h-4 bg-gray-900 rounded w-3/4 mb-2"></div>
+                                    <div class="h-3 bg-orange-500 rounded w-1/2"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="h-2 bg-gray-100 rounded w-full"></div>
+                                <div class="h-2 bg-gray-100 rounded w-5/6"></div>
+                                <div class="h-2 bg-gray-100 rounded w-4/6"></div>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-gray-100">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+                                    <div class="h-3 bg-gray-900 rounded w-1/3"></div>
+                                </div>
+                                <div class="space-y-2">
+                                    <div class="h-2 bg-gray-200 rounded w-full"></div>
+                                    <div class="h-2 bg-gray-200 rounded w-3/4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 heading-font">
+                    Simple, Transparent Pricing
+                </h2>
+                <p class="text-xl text-gray-600">Choose the plan that works for you</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="bg-white border-2 border-gray-200 rounded-3xl p-8 hover:border-gray-300 transition-all">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Basic Plan</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-5xl font-bold text-gray-900">$0</span>
+                        <span class="text-gray-600 ml-2">/forever</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span class="text-gray-700">3 Resume templates</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span class="text-gray-700">Basic editing</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span class="text-gray-700">PDF download</span>
+                        </li>
+                        <li class="flex items-start gap-3 opacity-40">
+                            <i class="fas fa-times text-gray-400 mt-1"></i>
+                            <span class="text-gray-500">AI suggestions</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-100 text-gray-900 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="orange-gradient rounded-3xl p-8 text-white shadow-2xl shadow-orange-500/30 transform scale-105">
+                    <div class="text-center mb-6">
+                        <span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm font-semibold">MOST POPULAR</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Pro Plan</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-5xl font-bold">$29</span>
+                        <span class="opacity-80 ml-2">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check mt-1"></i>
+                            <span>Unlimited resumes</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check mt-1"></i>
+                            <span>50+ Premium templates</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check mt-1"></i>
+                            <span>AI writing assistant</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check mt-1"></i>
+                            <span>Cover letter builder</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check mt-1"></i>
+                            <span>Priority support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-orange-600 py-3 rounded-full font-semibold hover:bg-gray-50 transition shadow-lg">
+                        Start Free Trial
+                    </button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white border-2 border-gray-200 rounded-3xl p-8 hover:border-gray-300 transition-all">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Premium</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-5xl font-bold text-gray-900">$129</span>
+                        <span class="text-gray-600 ml-2">/year</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span class="text-gray-700">Everything in Pro</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span class="text-gray-700">LinkedIn optimization</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span class="text-gray-700">Resume consultation</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span class="text-gray-700">Career coaching</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-900 text-white py-3 rounded-full font-semibold hover:bg-gray-800 transition">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 heading-font">
+                    Trusted by Job<br>Seekers Worldwide
+                </h2>
+                <p class="text-xl text-gray-600">See what our users have to say</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl"></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Arjun Patel</h4>
+                            <p class="text-sm text-gray-600">Software Engineer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">"CVPilot helped me land my dream job at a top tech company. The AI suggestions were incredibly helpful!"</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl"></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Mary Kim</h4>
+                            <p class="text-sm text-gray-600">Marketing Manager</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">"The templates are beautiful and professional. I got 3x more interview calls after using CVPilot."</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl"></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">James Wilson</h4>
+                            <p class="text-sm text-gray-600">Product Designer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">"Best resume builder I've used. Simple, fast, and produces amazing results. Highly recommend!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 px-6 relative overflow-hidden" style="background: linear-gradient(135deg, rgba(217, 119, 6, 0.95), rgba(180, 83, 9, 0.95)), url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23d97706%22 width=%22400%22 height=%22400%22/%3E%3C/svg%3E'); background-size: cover;">
+        <div class="max-w-4xl mx-auto text-center text-white relative z-10">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-6 heading-font">
+                Get Interview-Ready<br>in Minutes
+            </h2>
+            <p class="text-xl mb-10 opacity-90">Join thousands who've transformed their careers with CVPilot</p>
+            <button class="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transition-all">
+                Create Your Resume Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 px-6 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-5 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 orange-gradient rounded-lg flex items-center justify-center">
+                            <i class="fas fa-feather text-white text-sm"></i>
+                        </div>
+                        <span class="text-xl font-bold heading-font text-gray-900">CVPilot</span>
+                    </div>
+                    <p class="text-sm text-gray-600">Build your job-winning resume with AI</p>
+                </div>
+                <div>
+                    <h5 class="font-semibold text-gray-900 mb-4">Product</h5>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-gray-900">Resume Builder</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Resume Templates</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Cover Letter</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Resume Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-semibold text-gray-900 mb-4">Resources</h5>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-gray-900">Career Blog</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Resume Help</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Job Interview</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Career Advice</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-semibold text-gray-900 mb-4">Support</h5>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-gray-900">FAQ</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-semibold text-gray-900 mb-4">Social</h5>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-gray-900">Twitter</a></li>
+                        <li><a href="#" class="hover:text-gray-900">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Facebook</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-100">
+                <p class="text-sm text-gray-600 mb-4 md:mb-0">&copy; 2024 CVPilot. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-400 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-gray-900"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-gray-900"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Decorative CVPilot text at bottom -->
+    <div class="bg-gray-50 py-16 text-center relative overflow-hidden">
+        <h1 class="text-8xl md:text-9xl font-bold heading-font text-gray-900 opacity-10">CVPilot</h1>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23f59e0b' opacity='0.4'/%3E%3Ccircle cx='50' cy='50' r='25' fill='%23fbbf24'/%3E%3C/svg%3E" class="absolute top-0 left-10 w-24 h-24 opacity-30" alt="">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23f59e0b' opacity='0.4'/%3E%3Ccircle cx='50' cy='50' r='25' fill='%23fbbf24'/%3E%3C/svg%3E" class="absolute bottom-0 right-10 w-32 h-32 opacity-30" alt="">
+    </div>
+</body>
+</html>
