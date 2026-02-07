@@ -77,7 +77,7 @@ function loginuser()
     $_SESSION['lname'] = $user['last_name'];
     $_SESSION['email'] = $user['email'];
 
-    header('Location: ../builder.html');
+    header('Location: ../builder.php');
 }
 
 function signupuser(){
@@ -119,5 +119,5 @@ function signupuser(){
     $_SESSION['lname'] = $user['last_name'];
     $_SESSION['email'] = $user['email'];
 
-    header('Location: ../builder.html');
+    header('Location: ../builder.php');
 }

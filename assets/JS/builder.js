@@ -482,7 +482,8 @@ function downloadPDF() {
     filename: "My_Resume.pdf", // file name
     image: { type: "jpeg", quality: 0.98 },
     html2canvas: { scale: 2, useCORS: true },
-    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }, 
+    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+    pagebreak: { mode: "avoid-all" },
   };
 
   html2pdf().set(opt).from(element).save();
@@ -528,20 +529,90 @@ function generateAISummary(event) {
 
 // Load saved resume if exists
 window.addEventListener("load", () => {
+  // First, PHP session values are already in the inputs
+  // Then, try to load saved resume from localStorage
   const savedData = localStorage.getItem("resumeData");
   if (savedData) {
     const data = JSON.parse(savedData);
 
-    // Load personal info
+    // Load personal info, only overwrite if there’s a value
     Object.keys(data.personal).forEach((key) => {
       const element = document.getElementById(key);
-      if (element) {
-        element.value = data.personal[key];
+      if (element && data.personal[key]) {
+        element.value = data.personal[key]; // update input
+        resumeData.personal[key] = data.personal[key]; // sync JS object
+      } else if (element) {
+        // keep PHP value if localStorage empty
+        resumeData.personal[key] = element.value;
       }
     });
 
-    resumeData = data;
+    // Load experiences if any
+    if (data.experiences && data.experiences.length > 0) {
+      // Clear any initial empty entries
+      document.getElementById("experienceList").innerHTML = "";
+      experienceCount = 0;
+
+      data.experiences.forEach((exp) => {
+        addExperience();
+        const id = `exp${experienceCount}`;
+        document.getElementById(`${id}-title`).value = exp.title || "";
+        document.getElementById(`${id}-company`).value = exp.company || "";
+        document.getElementById(`${id}-startDate`).value = exp.startDate || "";
+        document.getElementById(`${id}-endDate`).value = exp.endDate || "";
+        document.getElementById(`${id}-location`).value = exp.location || "";
+        document.getElementById(`${id}-description`).value =
+          exp.description || "";
+      });
+
+      updateExperienceData();
+    }
+
+    // Load education if any
+    if (data.education && data.education.length > 0) {
+      document.getElementById("educationList").innerHTML = "";
+      educationCount = 0;
+
+      data.education.forEach((edu) => {
+        addEducation();
+        const id = `edu${educationCount}`;
+        document.getElementById(`${id}-degree`).value = edu.degree || "";
+        document.getElementById(`${id}-school`).value = edu.school || "";
+        document.getElementById(`${id}-startYear`).value = edu.startYear || "";
+        document.getElementById(`${id}-endYear`).value = edu.endYear || "";
+        document.getElementById(`${id}-location`).value = edu.location || "";
+        document.getElementById(`${id}-info`).value = edu.info || "";
+      });
+
+      updateEducationData();
+    }
+
+    // Load skills
+    if (data.skills && data.skills.length > 0) {
+      resumeData.skills = data.skills;
+      renderSkills();
+    }
+
+    // Finally, update the preview
     updatePreview();
-    renderSkills();
+  } else {
+    // If no localStorage, just sync JS object with PHP default inputs
+    const personalFields = [
+      "firstName",
+      "lastName",
+      "title",
+      "email",
+      "phone",
+      "location",
+      "linkedin",
+      "summary",
+    ];
+    personalFields.forEach((field) => {
+      const element = document.getElementById(field);
+      if (element) resumeData.personal[field] = element.value;
+    });
+
+    updatePreview();
   }
 });
+
