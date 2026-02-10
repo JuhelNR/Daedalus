@@ -561,8 +561,7 @@ window.addEventListener("load", () => {
         document.getElementById(`${id}-startDate`).value = exp.startDate || "";
         document.getElementById(`${id}-endDate`).value = exp.endDate || "";
         document.getElementById(`${id}-location`).value = exp.location || "";
-        document.getElementById(`${id}-description`).value =
-          exp.description || "";
+        document.getElementById(`${id}-description`).value = exp.description || "";
       });
 
       updateExperienceData();

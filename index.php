@@ -5,6 +5,7 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,30 +19,37 @@ session_start();
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
+
         .heading-font {
             font-family: 'Playfair Display', Georgia, serif;
         }
+
         .hero-gradient {
             background: linear-gradient(135deg, #d4a574 0%, #c8956a 50%, #b88860 100%);
         }
+
         .nature-card {
             background-size: cover;
             background-position: center;
             position: relative;
         }
+
         .nature-card::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
             border-radius: inherit;
         }
+
         .orange-gradient {
             background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
         }
+
         .green-gradient {
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
         }
+
         .flower-decoration {
             position: absolute;
             width: 80px;
@@ -50,6 +58,7 @@ session_start();
         }
     </style>
 </head>
+
 <body class="bg-gray-50 antialiased">
     <!-- Navigation -->
     <nav class="bg-white/95 backdrop-blur-sm py-4 px-6 fixed w-full top-0 z-50 border-b border-gray-100">
@@ -58,7 +67,7 @@ session_start();
                 <div class="w-8 h-8 orange-gradient rounded-lg flex items-center justify-center">
                     <i class="fas fa-feather text-white text-sm"></i>
                 </div>
-                <span class="text-xl font-bold heading-font text-gray-900">CVPilot</span>
+                <span class="text-xl font-bold heading-font text-gray-900">Daedalus</span>
             </div>
             <div class="hidden md:flex items-center gap-8">
                 <a href="#" class="text-sm text-gray-600 hover:text-gray-900">Home</a>
@@ -81,7 +90,7 @@ session_start();
         <!-- Decorative flowers -->
         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23f59e0b' opacity='0.6'/%3E%3Ccircle cx='50' cy='50' r='25' fill='%23fbbf24'/%3E%3C/svg%3E" class="flower-decoration top-10 left-10" alt="">
         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23f59e0b' opacity='0.6'/%3E%3Ccircle cx='50' cy='50' r='25' fill='%23fbbf24'/%3E%3C/svg%3E" class="flower-decoration top-20 right-16" alt="">
-        
+
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
                 <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 heading-font">
@@ -105,7 +114,7 @@ session_start();
                                 <p class="text-2xl font-semibold opacity-90 p">Your Professional Resume Awaits</p>
                             </div>
                         </div>
-                        
+
                         <!-- Floating UI Elements -->
                         <div class="absolute top-8 left-8 bg-white rounded-xl shadow-lg p-4 max-w-xs">
                             <div class="flex items-center gap-3 mb-2">
@@ -202,7 +211,7 @@ session_start();
                     <div class="relative z-10">
                         <h3 class="text-2xl font-bold mb-4">AI Writing Assistance</h3>
                         <p class="mb-6 opacity-90">Get intelligent suggestions for every section of your resume. Our AI helps you articulate your experience in the most impactful way.</p>
-                        
+
                         <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6">
                             <div class="mb-4">
                                 <p class="text-sm font-semibold mb-2">Professional Summary</p>
@@ -227,7 +236,7 @@ session_start();
                     <div class="relative z-10">
                         <h3 class="text-2xl font-bold mb-4">Smart Templates</h3>
                         <p class="mb-6 opacity-90">Choose from professionally designed templates that are optimized for ATS systems and look great on any device.</p>
-                        
+
                         <div class="space-y-3">
                             <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-3">
                                 <i class="fas fa-check-circle text-green-400"></i>
@@ -254,7 +263,7 @@ session_start();
                     <div class="relative z-10">
                         <h3 class="text-2xl font-bold mb-4">One-Click Apply</h3>
                         <p class="mb-6 opacity-90">Export your resume in multiple formats and apply to jobs with a single click. Save time and apply to more positions.</p>
-                        
+
                         <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6 text-center">
                             <div class="flex justify-center gap-3 mb-4">
                                 <div class="w-12 h-12 bg-white/30 rounded-lg flex items-center justify-center">
@@ -277,7 +286,7 @@ session_start();
                     <div class="p-8 text-white relative z-10">
                         <h3 class="text-2xl font-bold mb-4">Real-Time Preview</h3>
                         <p class="mb-6 opacity-90">See your changes instantly as you type. What you see is what you get - no surprises when you download.</p>
-                        
+
                         <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-4">
                             <div class="flex items-center gap-2 mb-3">
                                 <div class="w-8 h-8 bg-white/30 rounded-full"></div>
@@ -665,4 +674,5 @@ session_start();
         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23f59e0b' opacity='0.4'/%3E%3Ccircle cx='50' cy='50' r='25' fill='%23fbbf24'/%3E%3C/svg%3E" class="absolute bottom-0 right-10 w-32 h-32 opacity-30" alt="">
     </div>
 </body>
+
 </html>

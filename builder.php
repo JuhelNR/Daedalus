@@ -124,10 +124,10 @@ $email = $_SESSION['email'] ?? '';
             </div>
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="avatarButton">
               <li>
-                <a href="account_settings.php" class="block w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">Settings</a>
+                <a href="account_settings.php" class="block w-full p-2 hover:bg-gray-100 hover:text-heading rounded-md">Settings</a>
               </li>
               <li>
-                <a href="includes/logout.php" class="block w-full p-2 hover:bg-neutral-tertiary-medium text-fg-danger rounded-md">Sign out</a>
+                <a href="includes/logout.php" class="block w-full p-2 hover:bg-gray-100 text-fg-danger rounded-md">Sign out</a>
               </li>
             </ul>
           </div>
