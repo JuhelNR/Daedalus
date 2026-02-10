@@ -1,0 +1,13 @@
+{
+    "name": "juhel/daedalus",
+    "description": "Resume Builder Applicaton",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Juhel\\Daedalus\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
