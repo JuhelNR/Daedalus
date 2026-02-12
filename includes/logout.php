@@ -1,8 +1,16 @@
 <?php
-session_start();
+// Start session if not already started
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Clear all session data
 $_SESSION = [];
+
+// Destroy the session
 session_destroy();
 
+// Delete the session cookie
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
     setcookie(
@@ -16,5 +24,7 @@ if (ini_get("session.use_cookies")) {
     );
 }
 
-header('Location: ../index.php');
+// Redirect to login page
+header('Location: ../login.php?logout=success');
 exit();
+?>
