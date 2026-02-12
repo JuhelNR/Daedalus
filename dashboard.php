@@ -1,16 +1,16 @@
 <?php
 session_start();
+require_once('includes/middleware.php');
 
-// Redirect if not logged in
-if (!isset($_SESSION['uid'])) {
-    header('location: login.php');
-    exit();
-}
+// Prevent caching
+header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1
+header("Pragma: no-cache"); // HTTP 1.0
+header("Expires: 0"); // Proxies
 
-// Get user data from session
+// Get user data from session (middleware ensures user is logged in)
 $firstName = $_SESSION['fname'] ?? 'John';
 $lastName = $_SESSION['lname'] ?? 'Doe';
-$email = $_SESSION['email'] ?? 'user@example.com';
+$email = $_SESSION['email'] ?? 'DoeJohndoe@gmail.com';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +28,8 @@ $email = $_SESSION['email'] ?? 'user@example.com';
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;;
+            box-sizing: border-box;
+            border: none;
         }
 
         body {
@@ -211,17 +212,13 @@ $email = $_SESSION['email'] ?? 'user@example.com';
                 <i class="fas fa-th-large"></i>
                 <span>Dashboard</span>
             </a>
-            <a href="builder.php" class="nav-item">
+            <a href="my-resume.php" class="nav-item">
                 <i class="fas fa-file-alt"></i>
-                <span>Resumes</span>
+                <span>My Resumes</span>
             </a>
-            <a href="#" class="nav-item">
-                <i class="fas fa-envelope"></i>
-                <span>Cover Letters</span>
-            </a>
-            <a href="#" class="nav-item">
-                <i class="fas fa-briefcase"></i>
-                <span>CV</span>
+            <a href="templates.php" class="nav-item">
+                <i class="fa-brands fa-themeco"></i>
+                <span>Templates</span>
             </a>
             <a href="#" class="nav-item">
                 <i class="fas fa-share-nodes"></i>
@@ -287,16 +284,6 @@ $email = $_SESSION['email'] ?? 'user@example.com';
                         </button>
                     </a>
                 </div>
-            </div>
-        </div>
-
-        <!-- Tabs -->
-        <div style="background: white; border-bottom: 1px solid #e5e7eb; padding: 0 32px;">
-            <div style="display: flex;">
-                <button class="tab-button active">Resumes</button>
-                <button class="tab-button">Cover Letters</button>
-                <button class="tab-button">CVs</button>
-                <button class="tab-button">Resignation Letters</button>
             </div>
         </div>
 

@@ -2,7 +2,6 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once('middleware.php');
 require_once('db.php');
 require_once('validation.php');
 require_once('user.model.php');
@@ -72,7 +71,7 @@ function loginuser()
     //LOGIN SUCCESSFUL, SAVE SESSION DATA AND REDIRECT TO BUILDERPAGE
     $user = get_user_by_email($email);
 
-    $_SESSION['uid'] = $user['uid'];
+    $_SESSION['uid'] = $user['id'];
     $_SESSION['fname'] = $user['first_name'];
     $_SESSION['lname'] = $user['last_name'];
     $_SESSION['email'] = $user['email'];
@@ -114,10 +113,11 @@ function signupuser(){
     create_new_user($fname, $lname, $email, $pwd);
     $user = get_user_by_email($email);
 
-    $_SESSION['uid'] = $user['uid'];
+    $_SESSION['uid'] = $user['id'];
     $_SESSION['fname'] = $user['first_name'];
     $_SESSION['lname'] = $user['last_name'];
     $_SESSION['email'] = $user['email'];
+    $_SESSION['login-time'] = time(); //TO IMPLEMENT LOGIN TIMEOUT. 
 
     header('Location: ../builder.php');
 }
